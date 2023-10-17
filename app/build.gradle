@@ -3,12 +3,18 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+apply plugin: 'kotlin-kapt'
+
 android {
     namespace 'br.com.cats'
     compileSdk 34
 
     //To use data binding
     dataBinding {
+        enabled = true
+    }
+
+    viewBinding {
         enabled = true
     }
 
@@ -48,6 +54,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //To use data binding
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
     implementation 'androidx.databinding:databinding-runtime:8.1.2'
 }
