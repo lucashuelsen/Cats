@@ -6,6 +6,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cats.model.Cats
 import br.com.cats.ui.adapter.viewHolder.CatsAdapterViewHolder
+import com.squareup.picasso.Picasso
 
 class CatsAdapterList(
     private val viewLifecycleOwner: LifecycleOwner,

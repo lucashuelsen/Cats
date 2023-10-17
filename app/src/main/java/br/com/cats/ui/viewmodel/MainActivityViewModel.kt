@@ -10,10 +10,22 @@ class MainActivityViewModel : ViewModel() {
 
     init {
         val cats = ArrayList<Cats>()
-        cats.add(Cats("1","https://imgur.com/a/GfdKMLb","Gato 1"))
-        cats.add(Cats("2","https://imgur.com/a/GfdKMLb","Gato 2"))
-        cats.add(Cats("3","https://imgur.com/a/GfdKMLb","Gato 3"))
-        cats.add(Cats("4","https://imgur.com/a/GfdKMLb","Gato 4"))
+        cats.add(Cats("1","https://i.imgur.com/tMyUckg.gifv","Gato 1"))
+        cats.add(Cats("2","https://i.imgur.com/tMyUckg.gifv","Gato 2"))
+        cats.add(Cats("3","https://i.imgur.com/tMyUckg.gifv","Gato 3"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
+        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
 
         catList.postValue(cats)
     }
