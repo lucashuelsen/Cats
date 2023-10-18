@@ -31,7 +31,6 @@ class ImgurAPI {
 
             return galleryItems?: emptyList()
         } catch (e: Exception) {
-            // Trate outras exceções, se necessário
             emptyList()
         }
     }

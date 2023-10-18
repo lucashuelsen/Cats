@@ -7,7 +7,6 @@ import br.com.cats.data.repository.ImgurAPI
 class BOCats {
     fun getImagesList(): ArrayList<Cats> {
         val allImages = ArrayList<Cats>()
-
         getCats().forEach {
             allImages.addAll(it.images)
         }
