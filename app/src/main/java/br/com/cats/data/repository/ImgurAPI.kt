@@ -5,7 +5,7 @@ import br.com.cats.data.remote.CatService
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
-public class ImgurAPI {
+class ImgurAPI {
     companion object {
         const val URL = "https://api.imgur.com/"
         val CLIENTE_ID = "1ceddedc03a5d71"

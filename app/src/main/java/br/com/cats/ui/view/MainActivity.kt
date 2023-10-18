@@ -26,9 +26,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupObservers(){
-        mViewModel?.catList?.observe(this){
-        }
-
         mViewModel?.imageList?.observe(this){
             reloadList()
         }
@@ -64,6 +61,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object{
-        const val GRID_COLS = 3
+        const val GRID_COLS = 4
     }
 }
