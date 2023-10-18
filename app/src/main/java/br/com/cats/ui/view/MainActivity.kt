@@ -1,10 +1,11 @@
-package br.com.cats
+package br.com.cats.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import br.com.cats.R
 import br.com.cats.databinding.ActivityMainBinding
 import br.com.cats.ui.adapter.CatsAdapterList
 import br.com.cats.ui.viewmodel.MainActivityViewModel
@@ -55,6 +56,6 @@ class MainActivity : AppCompatActivity() {
 
 
     companion object{
-        const val GRID_COLS = 4
+        const val GRID_COLS = 3
     }
 }
