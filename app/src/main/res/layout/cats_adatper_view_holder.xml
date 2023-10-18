@@ -7,14 +7,15 @@
     <data>
         <variable
             name="cat"
-            type="br.com.cats.model.Cats" />
+            type="br.com.cats.model.CatsGallery" />
 
     </data>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
 
         <ImageView
             android:id="@+id/imageView"

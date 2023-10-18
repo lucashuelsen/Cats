@@ -6,9 +6,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cats.databinding.CatsAdatperViewHolderBinding
 import br.com.cats.model.Cats
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.gif.GifDrawable
-import com.bumptech.glide.request.target.ImageViewTarget
+import br.com.cats.model.CatsGallery
 import com.squareup.picasso.Picasso
 
 
@@ -16,11 +14,17 @@ class CatsAdapterViewHolder(
     private var binding: CatsAdatperViewHolderBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(cat: Cats) {
+    fun bind(cat: CatsGallery) {
         binding.cat = cat
+        val imageView = binding.imageView
 
         //Get online image
-        Picasso.get().load(cat.link).into(binding.imageView)
+        Picasso
+            .get()
+            .load(cat.getFirstImage())
+            .fit()
+            .centerCrop()
+            .into(imageView)
 
         binding.executePendingBindings()
     }

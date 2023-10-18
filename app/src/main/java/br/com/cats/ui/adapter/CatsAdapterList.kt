@@ -5,12 +5,13 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cats.model.Cats
+import br.com.cats.model.CatsGallery
 import br.com.cats.ui.adapter.viewHolder.CatsAdapterViewHolder
 import com.squareup.picasso.Picasso
 
 class CatsAdapterList(
     private val viewLifecycleOwner: LifecycleOwner,
-    private val catList: ArrayList<Cats>
+    private val catList: ArrayList<CatsGallery>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

@@ -3,31 +3,22 @@ package br.com.cats.ui.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import br.com.cats.model.CatResponse
 import br.com.cats.model.Cats
+import br.com.cats.model.CatsGallery
+import br.com.cats.repository.ImgurAPI
+import br.com.cats.services.CatService
+import br.com.cats.util.QueueMutableLiveDataLoader
+import retrofit2.Callback
 
 class MainActivityViewModel : ViewModel() {
-    val catList: MutableLiveData<ArrayList<Cats>> = MutableLiveData()
+    val catList = MutableLiveData<ArrayList<CatsGallery>>()
+    val dataLoader = QueueMutableLiveDataLoader()
 
     init {
-        val cats = ArrayList<Cats>()
-        cats.add(Cats("1","https://i.imgur.com/tMyUckg.gifv","Gato 1"))
-        cats.add(Cats("2","https://i.imgur.com/tMyUckg.gifv","Gato 2"))
-        cats.add(Cats("3","https://i.imgur.com/tMyUckg.gifv","Gato 3"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-        cats.add(Cats("4","https://i.imgur.com/yK9v63h.jpg","Gato 4"))
-
-        catList.postValue(cats)
+        dataLoader.load(catList){
+            ArrayList(ImgurAPI().getCats())
+        }
     }
 
     class ViewModelFactory() :
