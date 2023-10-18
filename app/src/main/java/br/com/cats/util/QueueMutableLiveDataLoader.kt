@@ -30,11 +30,6 @@ class QueueMutableLiveDataLoader : BaseObservable() {
     // ---------------------------------------------------------------------------------------------
     // region Public methods
     // ---------------------------------------------------------------------------------------------
-
-    fun load(dataLoader: IDataLoader<out Any?>) {
-        load(null, dataLoader, Dispatchers.Default)
-    }
-
     fun <T> load(
         mutableLiveData: MutableLiveData<in T>?,
         dataLoader: IDataLoader<T>?
@@ -119,10 +114,6 @@ class QueueMutableLiveDataLoader : BaseObservable() {
         synchronized(loaderLock) {
             setIsLoading(mDataLoaders.size > 0)
         }
-    }
-
-    fun getDataLoaders(): MutableList<IDataLoader<*>> {
-        return mDataLoaders
     }
 
     @Bindable
