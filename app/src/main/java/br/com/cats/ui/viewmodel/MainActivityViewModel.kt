@@ -17,9 +17,6 @@ class MainActivityViewModel : ViewModel() {
         }
     }
 
-
-
-
     class ViewModelFactory() :
         ViewModelProvider.NewInstanceFactory() {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
