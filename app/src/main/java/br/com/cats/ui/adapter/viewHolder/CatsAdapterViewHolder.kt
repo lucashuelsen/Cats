@@ -1,12 +1,12 @@
 package br.com.cats.ui.adapter.viewHolder
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cats.data.model.Cats
 import br.com.cats.databinding.CatsAdatperViewHolderBinding
-import br.com.cats.data.model.CatsGallery
 import com.bumptech.glide.Glide
 
 
@@ -14,7 +14,7 @@ class CatsAdapterViewHolder(
     private var binding: CatsAdatperViewHolderBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(cat: Cats) {
+    fun bind(cat: Cats, onClickImage: View.OnClickListener) {
         binding.cat = cat
         val imageView = binding.imageView
 
@@ -25,6 +25,8 @@ class CatsAdapterViewHolder(
             .fitCenter()
             .centerCrop()
             .into(imageView)
+
+        imageView.setOnClickListener(onClickImage)
 
         binding.executePendingBindings()
     }

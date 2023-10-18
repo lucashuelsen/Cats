@@ -2,6 +2,9 @@ package br.com.cats.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -48,12 +51,17 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = CatsAdapterList(
             viewLifecycleOwner = this,
-            mViewModel?.imageList?.value?: arrayListOf()
-            )
+            mViewModel?.imageList?.value?: arrayListOf(),
+            ){
+            onClickImage(it as ImageView)
+        }
 
         mBinding?.rcvCats?.adapter = adapter
     }
 
+    fun onClickImage(img: ImageView){
+        Toast.makeText(this, "teste ", Toast.LENGTH_LONG).show()
+    }
 
     companion object{
         const val GRID_COLS = 3
