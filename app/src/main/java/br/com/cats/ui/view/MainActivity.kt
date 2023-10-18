@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickImage(img: ImageView){
-        Toast.makeText(this, "teste ", Toast.LENGTH_LONG).show()
+        ImageZoom.newInstance(img).show(supportFragmentManager, "ImageZoom")
     }
 
     companion object{
