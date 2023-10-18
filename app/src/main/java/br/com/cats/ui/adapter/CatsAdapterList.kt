@@ -1,17 +1,14 @@
 package br.com.cats.ui.adapter
 
 import android.view.ViewGroup
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
-import br.com.cats.model.Cats
-import br.com.cats.model.CatsGallery
+import br.com.cats.data.model.Cats
 import br.com.cats.ui.adapter.viewHolder.CatsAdapterViewHolder
-import com.squareup.picasso.Picasso
 
 class CatsAdapterList(
     private val viewLifecycleOwner: LifecycleOwner,
-    private val catList: ArrayList<CatsGallery>
+    private val catList: ArrayList<Cats>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

@@ -1,6 +1,6 @@
-package br.com.cats.services
+package br.com.cats.data.remote
 
-import br.com.cats.model.CatResponse
+import br.com.cats.data.model.CatResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header

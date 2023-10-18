@@ -7,7 +7,7 @@
     <data>
         <variable
             name="cat"
-            type="br.com.cats.model.CatsGallery" />
+            type="br.com.cats.data.model.Cats" />
     </data>
 
 

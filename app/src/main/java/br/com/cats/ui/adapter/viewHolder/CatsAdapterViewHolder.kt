@@ -4,25 +4,24 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
+import br.com.cats.data.model.Cats
 import br.com.cats.databinding.CatsAdatperViewHolderBinding
-import br.com.cats.model.CatsGallery
-import br.com.cats.util.RoundedCornersTransformation
+import br.com.cats.data.model.CatsGallery
 import com.bumptech.glide.Glide
-import com.squareup.picasso.Picasso
 
 
 class CatsAdapterViewHolder(
     private var binding: CatsAdatperViewHolderBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(cat: CatsGallery) {
+    fun bind(cat: Cats) {
         binding.cat = cat
         val imageView = binding.imageView
 
         //Get online image
         Glide
             .with(binding.root.context)
-            .load(cat.getFirstImage())
+            .load(cat.link)
             .fitCenter()
             .centerCrop()
             .into(imageView)

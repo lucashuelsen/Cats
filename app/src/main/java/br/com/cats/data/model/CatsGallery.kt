@@ -1,4 +1,4 @@
-package br.com.cats.model
+package br.com.cats.data.model
 
 import com.google.gson.annotations.SerializedName
 

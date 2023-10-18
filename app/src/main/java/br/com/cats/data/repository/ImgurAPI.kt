@@ -1,9 +1,7 @@
-package br.com.cats.repository
+package br.com.cats.data.repository
 
-import br.com.cats.model.CatResponse
-import br.com.cats.model.CatsGallery
-import br.com.cats.services.CatService
-import kotlinx.coroutines.*
+import br.com.cats.data.model.CatsGallery
+import br.com.cats.data.remote.CatService
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -31,7 +29,6 @@ public class ImgurAPI {
                 emptyList()
             }
 
-            //TODO: REMOVER FILTRO E TRATAR PARA EXIBIR GIFS NO RECYCLERVIEW
             return galleryItems?: emptyList()
         } catch (e: Exception) {
             // Trate outras exceções, se necessário
