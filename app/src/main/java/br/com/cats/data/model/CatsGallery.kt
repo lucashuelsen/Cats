@@ -14,9 +14,4 @@ data class CatsGallery(
 
     @SerializedName("images")
     var images: List<Cats>
-) {
-
-    fun getFirstImage(): String{
-        return images.first().link?: this.link
-    }
-}
+)
