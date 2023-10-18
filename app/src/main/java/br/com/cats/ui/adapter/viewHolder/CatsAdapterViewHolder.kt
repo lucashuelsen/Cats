@@ -5,8 +5,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import br.com.cats.databinding.CatsAdatperViewHolderBinding
-import br.com.cats.model.Cats
 import br.com.cats.model.CatsGallery
+import br.com.cats.util.RoundedCornersTransformation
+import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 
 
@@ -19,10 +20,10 @@ class CatsAdapterViewHolder(
         val imageView = binding.imageView
 
         //Get online image
-        Picasso
-            .get()
+        Glide
+            .with(binding.root.context)
             .load(cat.getFirstImage())
-            .fit()
+            .fitCenter()
             .centerCrop()
             .into(imageView)
 

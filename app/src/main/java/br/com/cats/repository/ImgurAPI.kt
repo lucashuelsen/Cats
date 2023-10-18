@@ -32,9 +32,7 @@ public class ImgurAPI {
             }
 
             //TODO: REMOVER FILTRO E TRATAR PARA EXIBIR GIFS NO RECYCLERVIEW
-            return galleryItems?.filter {
-                it.images.count { it.type == "image/jpeg" } > 0
-            }?: emptyList()
+            return galleryItems?: emptyList()
         } catch (e: Exception) {
             // Trate outras exceções, se necessário
             emptyList()

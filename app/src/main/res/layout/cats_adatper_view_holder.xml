@@ -8,7 +8,6 @@
         <variable
             name="cat"
             type="br.com.cats.model.CatsGallery" />
-
     </data>
 
 
