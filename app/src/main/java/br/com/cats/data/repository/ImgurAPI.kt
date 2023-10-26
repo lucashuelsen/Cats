@@ -29,7 +29,7 @@ class ImgurAPI {
                 emptyList()
             }
 
-            return galleryItems?: emptyList()
+            return galleryItems?.filter { it.images != null }?: emptyList()
         } catch (e: Exception) {
             emptyList()
         }
